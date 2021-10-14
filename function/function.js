@@ -30,3 +30,19 @@ console.log( soma(1,1)(1) )
 
 const DoisMais = soma(1,1)
 console.log( DoisMais(1) )
+
+// params e retorno são opcionais
+
+function area(largura, altura) {
+  const area = largura * altura
+  if (area > 20) {
+    console.log(`Valor acima do permitido: ${area}m².`)
+  } else {
+    return `${area}m²`
+  }
+}
+
+console.log(area(5,6)) // 30m²
+console.log(area(2)) // NaN
+console.log(area()) // NaN
+console.log(area(2,4,5,8)) // 8m² (pega só os parametros que precisa)
