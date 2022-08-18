@@ -10,7 +10,7 @@ valores[4] = 10 // adiciona 10 na quarta posição do array
 console.log(valores) 
 console.log(valores.length) // quantos elementos tem no array
 
-valores.push(false, null, 'coringa')
+valores.push(false, null, 'coringa') // adiciona valor no final do array
 console.log(valores)
 
 console.log(valores.pop()) // exclui o último valor do array
