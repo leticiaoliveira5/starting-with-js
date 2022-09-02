@@ -1,0 +1,12 @@
+{
+  "name": "funcionarios",
+  "version": "1.0.0",
+  "main": "axios.js",
+    "scripts": {
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "loadash": "^1.0.0"
+  }
+}
