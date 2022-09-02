@@ -2,14 +2,14 @@ const port = 3003
 
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser') 
 const db = require('./db.js')
 
-app.get('/produtos', (req, res, next) => {
-  res.send({ nome: 'Notebook', preco: 123.45 }) // convert to json
-})
+app.use(bodyParser.urlencoded({ extended: true })) 
+// middleware chamado body parser faz o trabalho de decodificar a requisição
 
 app.get('/produtos', (req, res, next) => {
-  res.send(db.getProducts) // convert to json
+  res.send(db.getProducts()) // convert resp to json
 })
 
 app.get('/produtos/:id', (req, res, next) => {
@@ -21,6 +21,11 @@ app.post('/produtos', (req, res, next) => {
     name: req.body.name,
     price: req.body.price
   })
+  res.send(product)
+})
+
+app.delete('/produtos/:id', (req, res, next) => {
+  const product = db.deleteProduct(req.params.id)
   res.send(product)
 })
 
