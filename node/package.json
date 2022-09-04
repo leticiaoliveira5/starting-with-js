@@ -2,11 +2,12 @@
   "name": "funcionarios",
   "version": "1.0.0",
   "main": "axios.js",
-    "scripts": {
+  "scripts": {
     "start": "nodemon"
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "loadash": "^1.0.0"
+    "loadash": "^1.0.0",
+    "node-schedule": "1.3.0"
   }
 }
