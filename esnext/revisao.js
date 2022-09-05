@@ -1,3 +1,5 @@
+// ESNext is a name that always indicates the next version of JavaScript
+
 // let e var
 { 
   let a = 'a'
